@@ -5,7 +5,7 @@ with open("readme.md", "r") as f:
 
 setup(
     name='chessencryption',
-    version='1.0',
+    version='1.1',
     packages=find_packages(),
     install_requires=[
         'chess',
