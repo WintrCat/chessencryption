@@ -1,7 +1,7 @@
 from time import time
 from math import log2
 from chess import pgn, Board
-from util import get_pgn_games
+from .util import get_pgn_games
 
 
 ###

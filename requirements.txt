@@ -1,2 +1,5 @@
 chess
 flask
+setuptools
+wheel
+twine

@@ -8,3 +8,7 @@ temp
 public
 media
 __pycache__
+
+build
+*.egg-info
+dist
