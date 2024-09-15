@@ -17,17 +17,7 @@ BOT1_USERNAME = ''  # Bot1's Lichess Username
 BOT2_USERNAME = ''  # Bot2's Lichess Username
 
 # Define the PGN moves to play
-pgn_moves = """
-[Event "Bot Match"]
-[Site "https://lichess.org"]
-[Date "2024.04.27"]
-[Round "-"]
-[White "Bot1"]
-[Black "Bot2"]
-[Result "1-0"]
-
-1. d3 c6 2. Bg5 Nh6 3. Bf4 c5 4. Bd2 a6 5. Bg5 f6 6. Bxf6 Qa5+ 7. Bc3 Qb4 8. Bxb4 Ng8 9. Bxc5 Nh6 10. Bxe7 Rg8 11. Bxf8 Rh8 12. Bxg7 a5 13. Be5 Ra6 14. Bc3 Rg8 15. Nh3 Kf8 16. Bd2 Rg4 17. Ng5 Kg8 18. Nxh7 Kh8 19. Nf8 Kg8 20. Qc1 Rgg6 21. Nh7 Kh8 22. Nf8 Kg8 23. Nh7 Kxh7 24. Na3 Nc6 25. Be3 Kh8 26. Bg5 Kg8 27. Bd8 Kh8 28. Be7 Kg8 29. Bc5 Rg3 30. Bf8 Na7 31. Bg7 Rag6 32. f3 Rc6 33. Bh8 Kxh8 34. Nb5 Kg8 35. Nc7 Ra6 36. Kd1 Nc6 37. Ne8 Nf7 38. Qb1 Nh6 39. Rg1 Nf7 40. Kd2 Nd6 41. Nf6+ Kf7 42. Ne8 Rg6 43. Qc1 Rg8 44. d4 Ne5 45. Qe1 Nec4+ 46. Kd3 Rg7 47. a3 Rxg2 48. a4 Nxb2+ 49. Kc3 Rb6 50. Qb1 Ke6 51. Qa2+ Ke7 52. Rh1 Nf5 53. Qb3 Re6 54. Qxb7 Rexe2 55. Ra3 Rg3 56. Qa7 Re4 57. Nf6 Nh4 58. Qc7 Re5 59. Kb3 Re2 60. Ng4 Rh3 61. Qb8 Re5 62. Qxe5+ Kd8 63. Qe8+ Kc7 64. Bd3 Ng2 65. Ba6 Kd6 66. Nf6 Rxh2 67. Kxb2 Bb7 68. Qe6+ Kxe6 69. Kc3 Kxf6 70. Ra2 Rh7 71. Bd3 Be4 72. Rxh7 Bg6 73. Re7 Bxd3 74. Re2 Nf4 75. Rd2 Kf5 76. Rd1 Be4 77. Rf1 Bb7 78. Kb2 Ke6 79. Raa1 Ng6 80. Rfe1+ Kf5 81. Kb1 Bxf3 82. Re2 Kg4 83. Ka2 Kg5 84. Rh1 Ne7 85. Kb1 Bd5 86. Ree1 Nc6 87. Re5+ Kg4 88. Ree1 Be6 89. Rh6 Na7 90. Rexe6 Nc6 91. Re8 Na7 92. Rf8 Kg5 93. Rf3 Kxh6 94. Rf7 Kg5 95. d5 Nc6 96. Rf1 Nd4 97. Kc1 Nc6 98. Kb2 Ne7 99. Rg1+ Kf6 100. Rf1+ Ke5 101. Rf4 Kd6 102. Rf1 Nc8 103. Rf4 Kxd5 104. Re4 Kc5 105. Rd4 Kxd4 106. c3+ Kd5 107. Kc2 Kc6 108. Kb3 Kd6 109. Kc2 Nb6 110. Kd1 Nc8 111. Kd2 Nb6 112. c4 Kc5 113. Kc2 Kd6 114. Kd1 Kc5 115. Kc2 Nxc4 116. Kd3 Kb6 117. Kxc4 Ka7 118. Kb5 Ka8 119. Ka6 Kb8 120. Kb6 d6 121. Ka6 Ka8 122. Kb5 d5 123. Kc6 Ka7 124. Kc7 Ka8 125. Kc8 d4 126. Kd7 Kb8 127. Ke8 Ka8 128. Kd8 d3 129. Ke8 Kb8 130. Kd8 d2 131. Ke7 d1=R 132. Ke8 Rd4 133. Kf7 Rh4 134. Kg7 Rd4 135. Kf7 Kc7 136. Ke8 Kd6 137. Kf8 Kc6 138. Kf7 Kb6 139. Kg6 Rh4 140. Kg5 Ka7 141. Kxh4 Ka8 142. Kg4 Kb7 143. Kh3 Ka7 144. Kg4 Kb7 145. Kf5 Kc7 146. Ke5 Kb8 147. Ke6 Kc8 148. Kf7 Kc7 149. Ke8 Kc8 150. Kf7 Kd7 151. Kg6 Ke7 152. Kh6 Kf7 153. Kh7 Kf6 154. Kg8 Ke6 155. Kg7 Kf5 156. Kg8 Ke5 157. Kg7 Kd5 158. Kh6 Ke6 159. Kg7 Ke7 160. Kh6 Kd7 161. Kh5 Kc7 162. Kh6 Kc8 163. Kg7 Kd8 164. Kf7 Kc8 165. Kf6 Kc7 166. Kg5 Kd6 167. Kh4 Kc5 168. Kh5 Kd6 169. Kh6 Kd5 170. Kg7 Kd4 171. Kg6 Kc3 172. Kh6 Kb4 173. Kh5 Kc3 174. Kh6 Kc4 175. Kh5 Kd4 176. Kh4 Ke3 177. Kg4 Kf2 178. Kh5 Ke2 179. Kg6 Ke3 180. Kf6 Kf2 181. Kg7 Kg3 182. Kg6 Kf2 183. Kg7 Kg2 184. Kf7 Kf3 185. Kf8 Kf4 186. Kg8 Ke3 187. Kf8 Ke2 188. Kf7 Ke3 189. Kg8 Ke2 190. Kg7 Kf2 *
-"""
+pgn_moves = """ """
 
 # =========================== LOGGING SETUP ===========================
 logging.basicConfig(
@@ -129,6 +119,46 @@ def make_move(client, game_id, move):
     except Exception as e:
         logger.error(f"Unexpected error making move {move}: {e}")
 
+def resign_game(client, game_id):
+    """
+    Resign the game using the specified client.
+    """
+    try:
+        client.bots.resign_game(game_id)
+        logger.info(f"Resigned game ID: {game_id}")
+    except berserk.exceptions.ResponseError as e:
+        logger.error(f"Error resigning game {game_id}: {e}")
+    except Exception as e:
+        logger.error(f"Unexpected error resigning game {game_id}: {e}")
+
+def create_game_link(game_id):
+    """
+    Create a Lichess game link from the game ID.
+    """
+    return f"https://lichess.org/{game_id}"
+
+def parse_game_result(client, game_id):
+    """
+    Retrieve and return the game's result.
+    """
+    try:
+        game = client.games.export_by_id(game_id)
+        return game.get('winner', 'draw')
+    except Exception as e:
+        logger.error(f"Error retrieving game result for {game_id}: {e}")
+        return "Unknown"
+
+def create_pgn_from_game(client, game_id):
+    """
+    Export the PGN of the completed game.
+    """
+    try:
+        pgn = client.games.export_pgn(game_id)
+        return pgn
+    except Exception as e:
+        logger.error(f"Error exporting PGN for game {game_id}: {e}")
+        return ""
+
 def play_game(client_bot1, client_bot2, game_id, moves):
     """
     Play through the predefined moves in the game.
@@ -224,6 +254,21 @@ def main():
 
     # Play through the moves
     play_game(client_bot1, client_bot2, accepted_game_id, moves)
+
+    # Resign the game after all moves are played
+    # Decide which bot should resign. For this example, we'll have Bot2 resign.
+    resign_game(client_bot2, accepted_game_id)
+
+    # Generate and log the game link
+    game_link = create_game_link(accepted_game_id)
+    logger.info(f"Game Link: {game_link}")
+
+    # Optionally, you can export and log the PGN of the completed game
+    pgn = create_pgn_from_game(client_bot1, accepted_game_id)
+    if pgn:
+        with open(f"{accepted_game_id}.pgn", "w") as pgn_file:
+            pgn_file.write(pgn)
+        logger.info(f"PGN of the game has been saved to {accepted_game_id}.pgn")
 
     # Monitor the game until it concludes
     monitor_game(client_bot1, accepted_game_id)
