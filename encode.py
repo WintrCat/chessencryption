@@ -99,3 +99,28 @@ def encode(file_path: str):
 
     # return pgn string
     return "\n\n".join(output_pgns)
+
+
+def run_encoder():
+    file_path = input("Enter the file path: ")
+    output_file = input("Enter the output file name (with .pgn extension): ")
+
+    try:
+        # Call the encode function and pass the file path
+        pgn_result = encode(file_path)
+        
+        # Save the PGN result into a file
+        with open(output_file, "w") as file:
+            file.write(pgn_result)
+        
+        print(f"\nPGN(s) successfully saved to {output_file}")
+        
+    except FileNotFoundError:
+        print(f"Error: The file '{file_path}' was not found.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# To execute the function, simply call run_encoder()
+run_encoder()
+
+
