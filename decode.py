@@ -16,12 +16,17 @@ def decode(pgn_string: str, output_file_path: str):
     # load games from pgn file
     games: list[pgn.Game] = get_pgn_games(pgn_string)
 
+    print("reading file...")
+
     # convert moves to binary and write to output file
     with open(output_file_path, "w") as output_file:
         output_file.write("")
 
     output_file = open(output_file_path, "ab")
     output_data = ""
+
+    # convert file to chess moves
+    print("\ndecoding file...")
 
     for game_index, game in enumerate(games):
         chess_board = Board()

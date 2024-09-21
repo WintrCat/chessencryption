@@ -92,7 +92,7 @@ def encode(file_path: str):
         if eof_reached: break
 
     print(
-        f"\nsuccessfully converted file to pgn with "
+        f"\nsuccessfully converted file to .txt with "
         + f"{len(output_pgns)} game(s) "
         + f"({round(time() - start_time, 3)}s)."
     )
