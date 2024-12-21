@@ -2,6 +2,7 @@ from time import time
 from math import log2
 from chess import pgn, Board
 from util import get_pgn_games
+import sys
 
 
 ###
@@ -83,3 +84,31 @@ def decode(pgn_string: str, output_file_path: str):
         + f"{len(games)} game(s), {total_move_count} total move(s)"
         + f"({round(time() - start_time, 3)}s)."
     )
+
+
+def run_decoder():
+    if len(sys.argv) != 3:
+        print("Usage: python run_decoder.py <input_pgn_file> <output_file>")
+        sys.exit(1)
+    
+    input_pgn_file = sys.argv[1]
+    output_file_path = sys.argv[2]
+    
+    try:
+        with open(input_pgn_file, 'r') as f:
+            pgn_string = f.read()
+        
+        decode(pgn_string, output_file_path)
+        
+        print(f"Decoded data has been written to {output_file_path}")
+        
+    except FileNotFoundError:
+        print(f"Error: File '{input_pgn_file}' not found.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+if __name__ == "__main__":
+    run_decoder()
+
+
+
