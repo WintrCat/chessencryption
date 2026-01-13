@@ -30,10 +30,10 @@ def decode(pgn_string: str, output_file_path: str):
         total_move_count += len(game_moves)
 
         for move_index, move in enumerate(game_moves):
-            # get UCIs of legal moves in current position
+            # MINIMAL FIX: Added sorted() here to match the encoder
             legal_move_ucis = [
                 legal_move.uci()
-                for legal_move in list(chess_board.generate_legal_moves())
+                for legal_move in sorted(list(chess_board.generate_legal_moves()), key=lambda m: m.uci())
             ]
 
             # get binary of the move played, using its index in the legal moves
