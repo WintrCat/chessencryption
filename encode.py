@@ -29,7 +29,8 @@ def encode(file_path: str):
     chess_board = Board()
 
     while True:
-        legal_moves = list(chess_board.generate_legal_moves())
+        # MINIMAL FIX: Added sorted() to ensure moves are always in the same order
+        legal_moves = sorted(list(chess_board.generate_legal_moves()), key=lambda m: m.uci())
 
         # assign moves a binary value based on its index
         move_bits = {}
